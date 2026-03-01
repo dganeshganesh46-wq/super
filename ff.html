@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devarajugaariganesh</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #f4f4f4;
+        color: #111;
+    }
+
+    /* Top Section */
+    .top {
+        height: 80vh;
+        background: #222;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid white;
+        margin-bottom: 20px;
+    }
+
+    .top h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: #3b82f6;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #2563eb;
+    }
+
+    /* Info Section */
+    .info {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        display: none;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    h2 {
+        color: #3b82f6;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    /* Marquee Below Info */
+    .name-marquee {
+        width: 100%;
+        overflow: hidden;
+        background: #3b82f6;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        white-space: nowrap;
+        box-sizing: border-box;
+        padding: 10px 0;
+        display: none;
+        margin-top: 20px;
+    }
+
+    .name-marquee span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    /* Resume Form */
+    .resume-form {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        display: none;
+        text-align: left;
+    }
+
+    .resume-form input, 
+    .resume-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .resume-form button {
+        padding: 12px 25px;
+        background: #3b82f6;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .resume-form button:hover {
+        background: #2563eb;
+    }
+</style>
+</head>
+<body>
+
+<!-- Top Section with Photo -->
+<div class="top">
+    <img src="ganesh.jpeg" alt="Devarajugaariganesh Photo">
+    <marquee> <h1>DEVARAJUGAARIGANESH</h1> </marquee>
+
+    <button class="btn" onclick="showInfo()">Open My Webpage Bro</button>
+</div>
+
+<!-- Info Section -->
+<div class="info" id="info">
+    <h2>About Me</h2>
+    <p><strong>Name:</strong> Ganesh</p>
+    <p><strong>Education:</strong> Diploma in CSE, MS Ramaiah, Bangalore</p>
+
+    <h2>Skills</h2>
+    <p><strong>DevOps:</strong> Kubernetes, Docker, Maven, GitHub, Git, Ansible, AWS, Prometheus, Jenkins</p>
+    <p><strong>Python:</strong> Basic to Advanced, Data Science, Web Scraping, DSA, AIML</p>
+    <p><strong>Python Libraries:</strong> NumPy, Pandas, Matplotlib, NLTK, TextBlob, TensorFlow, scikit-learn</p>
+</div>
+
+<!-- Marquee Name Below -->
+<div class="name-marquee" id="nameMarquee">
+    <span>DEVARAJU GAARIGANESH &nbsp;&nbsp;&nbsp; DEVARAJU GAARIGANESH &nbsp;&nbsp;&nbsp;</span>
+</div>
+
+<!-- Resume Form -->
+<div class="resume-form" id="resumeForm">
+    <h2>Contact / Resume Form</h2>
+    <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="5" placeholder="Message / Resume Details" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+function showInfo() {
+    document.getElementById('info').style.display = 'block';
+    document.getElementById('nameMarquee').style.display = 'block';
+    document.getElementById('resumeForm').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('info').offsetTop - 50, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
